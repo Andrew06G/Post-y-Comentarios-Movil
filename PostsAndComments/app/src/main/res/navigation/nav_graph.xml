@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            app:startDestination="@id/postsFragment">
+
+    <fragment
+            android:id="@+id/postsFragment"
+            android:name="com.example.postscommentsapp.presentation.ui.posts.PostsFragment"
+            android:label="Posts"
+            tools:layout="@layout/fragment_posts">
+
+        <action
+                android:id="@+id/action_postsFragment_to_commentsFragment"
+                app:destination="@id/commentsFragment" />
+    </fragment>
+
+    <fragment
+            android:id="@+id/commentsFragment"
+            android:name="com.example.postscommentsapp.presentation.ui.comments.CommentsFragment"
+            android:label="Comentarios"
+            tools:layout="@layout/fragment_comments">
+
+        <argument
+                android:name="postId"
+            app:argType="integer" />
+    </fragment>
+
+</navigation>
