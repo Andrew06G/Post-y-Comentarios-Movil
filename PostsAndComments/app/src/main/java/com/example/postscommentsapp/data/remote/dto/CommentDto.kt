@@ -1,8 +1,9 @@
 package com.example.postscommentsapp.data.remote.dto
 
-data class PostDto(
-    val userId: Int,
+data class CommentDto(
+    val postId: Int,
     val id: Int,
-    val title: String,
+    val name: String,
+    val email: String,
     val body: String
 )
