@@ -4,10 +4,6 @@ import android.content.Context;
 
 import androidx.room.Room;
 
-import com.example.postscommentsapp.data.local.dao.CommentDao;
-import com.example.postscommentsapp.data.local.dao.PostDao;
-import com.example.postscommentsapp.data.local.db.AppDatabase;
-
 import javax.inject.Singleton;
 
 import dagger.Module;

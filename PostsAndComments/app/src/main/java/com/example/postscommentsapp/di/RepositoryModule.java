@@ -1,10 +1,5 @@
 package com.example.postscommentsapp.di;
 
-import com.example.postscommentsapp.data.repository.CommentsRepositoryImpl;
-import com.example.postscommentsapp.data.repository.PostsRepositoryImpl;
-import com.example.postscommentsapp.domain.repository.CommentsRepository;
-import com.example.postscommentsapp.domain.repository.PostsRepository;
-
 import javax.inject.Singleton;
 
 import dagger.Module;

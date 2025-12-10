@@ -4,10 +4,6 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.example.postscommentsapp.domain.model.Comment;
-import com.example.postscommentsapp.domain.usecase.GetCommentsUseCase;
-import com.example.postscommentsapp.domain.usecase.InsertCommentUseCase;
-
 import java.util.List;
 import java.util.concurrent.Executors;
 

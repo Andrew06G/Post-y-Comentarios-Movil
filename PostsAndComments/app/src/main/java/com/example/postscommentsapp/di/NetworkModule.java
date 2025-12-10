@@ -1,6 +1,5 @@
 package com.example.postscommentsapp.di;
 
-import com.example.postscommentsapp.data.remote.JSONPlaceholderService;
 import dagger.Module;
 import dagger.Provides;
 import dagger.hilt.InstallIn;
