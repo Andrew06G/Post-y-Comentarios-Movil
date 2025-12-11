@@ -1,29 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            xmlns:tools="http://schemas.android.com/tools"
-            app:startDestination="@id/postsFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/postListFragment">
 
     <fragment
-            android:id="@+id/postsFragment"
-            android:name="com.example.postscommentsapp.presentation.ui.posts.PostsFragment"
-            android:label="Posts"
-            tools:layout="@layout/fragment_posts">
+        android:id="@+id/postListFragment"
+        android:name="com.example.postscommentsapp.presentation.postlist.PostListFragment"
+        android:label="Posts"
+        tools:layout="@layout/fragment_post_list">
 
         <action
-                android:id="@+id/action_postsFragment_to_commentsFragment"
-                app:destination="@id/commentsFragment" />
+            android:id="@+id/action_postListFragment_to_postDetailFragment"
+            app:destination="@id/postDetailFragment" />
     </fragment>
 
     <fragment
-            android:id="@+id/commentsFragment"
-            android:name="com.example.postscommentsapp.presentation.ui.comments.CommentsFragment"
-            android:label="Comentarios"
-            tools:layout="@layout/fragment_comments">
+        android:id="@+id/postDetailFragment"
+        android:name="com.example.postscommentsapp.presentation.postdetail.PostDetailFragment"
+        android:label="Detail"
+        tools:layout="@layout/fragment_post_detail">
 
-        <argument
-                android:name="postId"
-            app:argType="integer" />
+        <action
+            android:id="@+id/action_postDetailFragment_to_commentListFragment"
+            app:destination="@id/commentListFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/commentListFragment"
+        android:name="com.example.postscommentsapp.presentation.comments.CommentListFragment"
+        android:label="Comments"
+        tools:layout="@layout/fragment_comment_list" />
 
 </navigation>

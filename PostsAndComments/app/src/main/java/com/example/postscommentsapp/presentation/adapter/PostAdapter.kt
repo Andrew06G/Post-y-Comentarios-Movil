@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.postscommentsapp.databinding.ItemPostBinding
-import com.example.postscommentsapp.domain.model.Post  // <── FALTABA
+import com.example.postscommentsapp.domain.model.Post
 
 class PostAdapter(
     private val listener: (Post) -> Unit
@@ -24,13 +24,20 @@ class PostAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostViewHolder {
         return PostViewHolder(
-            ItemPostBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            ItemPostBinding.inflate(
+                LayoutInflater.from(parent.context),
+                parent,
+                false
+            )
         )
     }
 
     override fun onBindViewHolder(holder: PostViewHolder, position: Int) {
         val post = list[position]
-        holder.binding.tvTitle.text = post.title
+
+        holder.binding.txtTitle.text = post.title
+        holder.binding.txtBody.text = post.body
+
         holder.binding.root.setOnClickListener { listener(post) }
     }
 }
