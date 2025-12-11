@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -44,6 +45,15 @@ class PostListFragment : Fragment() {
 
         viewModel.posts.observe(viewLifecycleOwner) {
             adapter.submitList(it)
+        }
+
+        binding.edtSearch.addTextChangedListener { text ->
+            val query = text?.toString()?.trim().orEmpty()
+            if (query.isEmpty()) {
+                viewModel.loadPosts()
+            } else {
+                viewModel.search(query)
+            }
         }
 
         viewModel.loadPosts()
