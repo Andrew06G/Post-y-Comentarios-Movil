@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.postscommentsapp.databinding.FragmentPostListBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -33,7 +34,9 @@ class PostListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         adapter = PostAdapter { post ->
-            // falta navegar al detalle
+            val action = PostListFragmentDirections
+                .actionPostListFragmentToPostDetailFragment(post.id)
+            findNavController().navigate(action)
         }
 
         binding.recyclerPosts.layoutManager = LinearLayoutManager(requireContext())

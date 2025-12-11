@@ -7,16 +7,23 @@
 
     <TextView
         android:id="@+id/txtDetailTitle"
-        android:textSize="20sp"
+        android:textSize="22sp"
         android:textStyle="bold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <TextView
         android:id="@+id/txtDetailBody"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="16dp"
         android:textSize="16sp"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnVerComentarios"
+        android:text="Ver comentarios"
+        android:layout_marginTop="24dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
 </LinearLayout>

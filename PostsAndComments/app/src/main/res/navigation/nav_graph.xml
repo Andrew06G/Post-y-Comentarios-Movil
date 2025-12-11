@@ -8,8 +8,7 @@
     <fragment
         android:id="@+id/postListFragment"
         android:name="com.example.postscommentsapp.presentation.postlist.PostListFragment"
-        android:label="Posts"
-        tools:layout="@layout/fragment_post_list">
+        android:label="Posts">
 
         <action
             android:id="@+id/action_postListFragment_to_postDetailFragment"
@@ -19,18 +18,25 @@
     <fragment
         android:id="@+id/postDetailFragment"
         android:name="com.example.postscommentsapp.presentation.postdetail.PostDetailFragment"
-        android:label="Detail"
-        tools:layout="@layout/fragment_post_detail">
-
+        android:label="Detalle del Post" >
+        <argument
+            android:name="postId"
+            app:argType="integer" />
+        
         <action
             android:id="@+id/action_postDetailFragment_to_commentListFragment"
             app:destination="@id/commentListFragment" />
     </fragment>
 
+
     <fragment
         android:id="@+id/commentListFragment"
         android:name="com.example.postscommentsapp.presentation.comments.CommentListFragment"
         android:label="Comments"
-        tools:layout="@layout/fragment_comment_list" />
+        tools:layout="@layout/fragment_comment_list">
+        <argument
+            android:name="postId"
+            app:argType="integer" />
+    </fragment>
 
 </navigation>

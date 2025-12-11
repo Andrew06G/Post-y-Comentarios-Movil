@@ -21,6 +21,10 @@ object UseCaseModule {
         SearchPostsUseCase(repo)
 
     @Provides
+    fun provideGetPostByIdUseCase(repo: PostsRepository) =
+        GetPostByIdUseCase(repo)
+
+    @Provides
     fun provideGetCommentsUseCase(repo: CommentsRepository) =
         GetCommentsUseCase(repo)
 

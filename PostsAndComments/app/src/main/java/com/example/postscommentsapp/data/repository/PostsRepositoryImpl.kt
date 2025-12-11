@@ -24,6 +24,11 @@ class PostsRepositoryImpl @Inject constructor(
         return remotePosts
     }
 
+    override suspend fun getPostById(postId: Int): Post? {
+        val entity = postDao.getPostById(postId)
+        return entity?.let { PostMapper.toDomain(it) }
+    }
+
     override suspend fun searchPosts(query: String): List<Post> {
         val local = postDao.getAllPosts()
         return PostMapper.toDomainList(
