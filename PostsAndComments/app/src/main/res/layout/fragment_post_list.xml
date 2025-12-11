@@ -9,11 +9,12 @@
         android:id="@+id/edtSearch"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Buscar..."
+        android:hint="Buscar por título o ID..."
         android:textColor="@color/black"
         android:padding="12dp"
         android:layout_margin="12dp"
         android:background="@android:drawable/edit_text"
+        android:inputType="text"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>

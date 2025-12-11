@@ -29,7 +29,15 @@ class PostListViewModel @Inject constructor(
 
     fun search(query: String) {
         viewModelScope.launch {
-            val result = searchPostsUseCase.execute(query)
+            val trimmed = query.trim()
+            val asNumber = trimmed.toIntOrNull()
+            if (asNumber != null) {
+                val post = getPostsUseCase.execute().find { it.id == asNumber }
+                _posts.value = post?.let { listOf(it) } ?: emptyList()
+                return@launch
+            }
+
+            val result = searchPostsUseCase.execute(trimmed)
             _posts.value = result
         }
     }
