@@ -12,18 +12,18 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
-@Module
-@InstallIn(SingletonComponent::class)
+@Module //Instruction to create objects
+@InstallIn(SingletonComponent::class) //Important, only one db to all app.
 object DatabaseModule {
 
-    @Provides
-    @Singleton
+    @Provides //It's a warning to say to the phone for create a database
+    @Singleton //Only one db on all app
     fun provideDatabase(@ApplicationContext context: Context): AppDatabase =
         Room.databaseBuilder(
             context,
             AppDatabase::class.java,
             "posts_comments_db"
-        ).fallbackToDestructiveMigration()
+        ).fallbackToDestructiveMigration() //If db changes tha old one is destroyed
             .build()
 
     @Provides

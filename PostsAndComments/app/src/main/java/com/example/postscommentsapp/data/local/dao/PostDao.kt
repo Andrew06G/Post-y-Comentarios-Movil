@@ -15,6 +15,6 @@ interface PostDao {
     @Query("SELECT * FROM posts WHERE id = :postId LIMIT 1")
     suspend fun getPostById(postId: Int): PostEntity?
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    @Insert(onConflict = OnConflictStrategy.REPLACE) //On conflic is to update the date with the same id
     suspend fun insertPosts(posts: List<PostEntity>)
 }

@@ -7,6 +7,7 @@ import com.example.postscommentsapp.data.local.dao.PostDao
 import com.example.postscommentsapp.data.local.entity.CommentEntity
 import com.example.postscommentsapp.data.local.entity.PostEntity
 
+//If in the furute I need to add more Entities, I'll need write that here
 @Database(
     entities = [PostEntity::class, CommentEntity::class],
     version = 1,

@@ -35,11 +35,26 @@ Aplicación Android para listar publicaciones, buscarlas por título o ID, ver d
 5) Crear comentario → se guarda en Room y se refresca la lista.  
 
 ## 📸 Screenshots
-- Lista principal: `./PostsAndComments/screenshots/PrincipalListPost.jpg`
-- Búsqueda por nombre: `./PostsAndComments/screenshots/SearchByName.jpg`
-- Búsqueda por ID: `./PostsAndComments/screenshots/SearchById.jpg`
-- Detalle de post: `./PostsAndComments/screenshots/PostInformation.jpg`
-- Sección de comentarios: `./PostsAndComments/screenshots/CommentsSection.jpg`
+
+### Lista Principal
+![Lista Principal](./PostsAndComments/screenshots/PrincipalListPost.jpg)
+*Pantalla inicial que muestra la lista completa de posts obtenidos de la API, con barra de búsqueda en la parte superior.*
+
+### Búsqueda por Nombre
+![Búsqueda por Nombre](./PostsAndComments/screenshots/SearchByName.jpg)
+*Funcionalidad de búsqueda en tiempo real que filtra los posts por título mientras el usuario escribe.*
+
+### Búsqueda por ID
+![Búsqueda por ID](./PostsAndComments/screenshots/SearchById.jpg)
+*Búsqueda inteligente que permite encontrar un post específico ingresando su ID numérico directamente.*
+
+### Detalle de Post
+![Detalle de Post](./PostsAndComments/screenshots/PostInformation.jpg)
+*Vista detallada que muestra el título y contenido completo del post seleccionado, con acceso a los comentarios.*
+
+### Sección de Comentarios
+![Sección de Comentarios](./PostsAndComments/screenshots/CommentsSection.jpg)
+*Interfaz para visualizar y crear comentarios asociados a un post, con persistencia local en Room Database.*
 
 ## 🚀 Build
 Requisitos: JDK 11+, Android Studio Giraffe o superior.
