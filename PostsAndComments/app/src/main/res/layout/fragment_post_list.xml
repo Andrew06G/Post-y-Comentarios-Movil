@@ -10,6 +10,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Buscar por título o ID..."
+        android:textColorHint="@color/black"
         android:textColor="@color/black"
         android:padding="12dp"
         android:layout_margin="12dp"

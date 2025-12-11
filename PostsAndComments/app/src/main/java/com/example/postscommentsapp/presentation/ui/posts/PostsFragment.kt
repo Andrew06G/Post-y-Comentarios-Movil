@@ -8,7 +8,7 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.postscommentsapp.R
 import com.example.postscommentsapp.databinding.FragmentPostsBinding
-import com.example.postscommentsapp.presentation.adapter.PostAdapter
+import com.example.postscommentsapp.presentation.postlist.PostAdapter
 import com.example.postscommentsapp.presentation.viewmodel.PostsViewModel   // <── FALTABA
 import dagger.hilt.android.AndroidEntryPoint
 

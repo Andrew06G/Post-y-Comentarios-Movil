@@ -44,6 +44,7 @@ class CommentListFragment : Fragment() {
 
         val adapter = CommentAdapter()
         binding.recyclerComments.layoutManager = LinearLayoutManager(requireContext())
+        binding.recyclerComments.setHasFixedSize(true)
         binding.recyclerComments.adapter = adapter
 
         viewModel.comments.observe(viewLifecycleOwner) { list ->

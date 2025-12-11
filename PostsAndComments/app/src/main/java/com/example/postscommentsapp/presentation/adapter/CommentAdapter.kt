@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.postscommentsapp.databinding.ItemCommentBinding
-import com.example.postscommentsapp.domain.model.Comment   // <── ESTE FALTABA
+import com.example.postscommentsapp.domain.model.Comment
 
 class CommentAdapter : RecyclerView.Adapter<CommentAdapter.CommentViewHolder>() {
 
@@ -28,6 +28,7 @@ class CommentAdapter : RecyclerView.Adapter<CommentAdapter.CommentViewHolder>() 
 
     override fun onBindViewHolder(holder: CommentViewHolder, position: Int) {
         val comment = list[position]
+        holder.binding.tvAuthor.text = "Autor anónimo"
         holder.binding.tvComment.text = comment.comment
     }
 }
